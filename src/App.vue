@@ -20,5 +20,4 @@ export default {
   <Modal :header="header" :text="text" theme="sale" />
 </template>
 
-<style >
-</style>
+<style ></style>
