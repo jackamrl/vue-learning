@@ -1,8 +1,7 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{ sale: theme === 'sale' }">
-      <slot></slot>
-
+      <slot>default content</slot>
       <div class="actions">
         <slot name="links"> </slot>
       </div>
@@ -49,6 +48,19 @@ export default {
     p {
       text-align: center;
     }
+    .actions {
+      text-align: center;
+      margin: 30px 0 10px 0;
+
+      a {
+        color: #333;
+        padding: 8px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 10px;
+      }
+    }
   }
 
   .modal.sale {
@@ -57,6 +69,12 @@ export default {
 
     h1 {
       color: #fff;
+    }
+    .actions {
+      a {
+        color: #fff;
+        border: 1px solid #fff;
+      }
     }
   }
 }
